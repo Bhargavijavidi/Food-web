@@ -17,8 +17,9 @@ function BasicExample() {
         try{
          const response=await fetch(url)
          const data=await response.json()
-         setFood(data.categories) 
-         setFilteredFood(data.categories); 
+         setFood(data.categories.sort(((a, b) => 
+            a.strCategory.localeCompare(b.strCategory))))
+         setFilteredFood(data.categories.sort()); 
          setloading(false)
          setiserror({status:false ,msg:""})
         }
