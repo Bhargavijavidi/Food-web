@@ -52,8 +52,10 @@ const handlebuynow=(item)=>{
     <>
      <div className='navsection'>
 
-<img width="70" height="70" src="https://img.icons8.com/3d-fluency/94/gingerbread-house.png" alt="gingerbread-house"/>
-<div>
+<img width="70" height="70"
+ src="https://img.icons8.com/3d-fluency/94/gingerbread-house.png" 
+ alt="gingerbread-house" className='logo'/>
+<div className='search-bar'>
 <input type='text' name="name" id="name" placeholder='Search Item...'
  value={searchterm} onChange={(e)=>setsearchterm(e.target.value)}/>
 <Button variant="warning" size="sm" className="mb-1" onClick={findItem}>
@@ -79,5 +81,4 @@ Search
     </>
 )
 }
-
 export default BasicExample;
