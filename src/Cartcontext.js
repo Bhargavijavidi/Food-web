@@ -5,7 +5,7 @@ export const CartProvider=({children})=>{
 const addItemtocart=(item)=>{
     setSelectedItems((prevItems)=>[...prevItems,item])
 }
-  return <cartcontext.Provider value={{selectedItems,addItemtocart}}>
+  return <cartcontext.Provider value={{selectedItems,setSelectedItems,addItemtocart}}>
      {children}
     </cartcontext.Provider>
 }

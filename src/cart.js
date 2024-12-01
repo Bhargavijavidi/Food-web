@@ -3,19 +3,24 @@ import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import { useCart } from './Cartcontext';
 import { useNavigate } from 'react-router-dom';
+import Banner from './banner';
 function Cart() {
   const navigate=useNavigate();
-  const{selectedItems}=useCart();
+  const{selectedItems,setSelectedItems}=useCart();
   const[items,setitems]=useState(selectedItems);
   const handleremove=(idRemove)=>{
     const newItems=items.filter((eachItem)=>
       eachItem.idCategory!==idRemove)
-      setitems(newItems);
+      setitems(newItems); 
+      setSelectedItems(newItems);
   }
 
     return ( <>
-    <img width="30" height="30" id="backbutton"
-    src="https://img.icons8.com/forma-light/50/left.png" alt="left" onClick={()=>navigate('/')}/>
+    <div className='checkIn'>
+            <img width="30" height="30" id="backbutton"
+    src="https://img.icons8.com/forma-light/50/left.png" alt="left" 
+    onClick={()=>navigate('/')}/><span> <Banner/></span>
+    </div>
     <h2>Selected Items</h2> 
     <div className='cartdiv'> 
     { items.length===0? 

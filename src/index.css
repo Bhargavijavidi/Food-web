@@ -58,7 +58,6 @@ nav{
   grid-template-columns: 1fr 1fr 1fr 1fr;
   gap: 30px;
 }
-
 #backbutton{
   display: none;
 }
@@ -91,6 +90,20 @@ margin:auto;
 #backbutton{
 display: block;
 margin-bottom: 10px;
+}
+.navitems{
+  font-size: 0.8rem;
+}
+.checkIn{
+  background-color: rgb(255, 228, 187);;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 0px 20px;
+  align-items: center;
+}
+.divide{
+  display: grid;
+  grid-template-columns: 1fr;
 }
 }
 @media only screen and (min-width:770px) and (max-width:1200px)

@@ -53,7 +53,6 @@ const handlebuynow=(item)=>{
   return (
     <>
      <div className='navsection'>
-
 <img width="70" height="70"
  src="https://img.icons8.com/3d-fluency/94/gingerbread-house.png" 
  alt="gingerbread-house" className='logo'/>
