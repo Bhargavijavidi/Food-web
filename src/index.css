@@ -68,8 +68,9 @@ nav{
     margin-top: 20px;
   }
 .logo{
-  height: 2.8rem ;
-  width: 2.8rem;
+  height: 2.6rem ;
+  width: 2.6rem;
+  margin-left: 6px;
 }
 .search-bar{
   display: flex;
@@ -80,7 +81,9 @@ nav{
   height: 2rem;
 }
 .navsection{
-margin:auto;
+ margin: auto;
+ display: flex;
+  gap: 6px;
 }
 .cartdiv{
   display: grid;
