@@ -58,9 +58,9 @@ const handlebuynow=(item)=>{
 <div className='search-bar'>
 <input type='text' name="name" id="name" placeholder='Search Item...'
  value={searchterm} onChange={(e)=>setsearchterm(e.target.value)}/>
-<Button variant="warning" size="sm" className="mb-1" onClick={findItem}>
-Search
-</Button>
+<img 
+ src="https://img.icons8.com/ios-glyphs/50/search.png" 
+ alt="search" onClick={findItem} className='searchicon'/>
 </div>
 <Navlink/>
 </div>
