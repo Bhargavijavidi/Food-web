@@ -5,8 +5,7 @@ import Card from 'react-bootstrap/Card';
 import { useNavigate } from 'react-router-dom';
 import Banner from './banner';
 function Checkout() {
-    const{selectedItems,setSelectedItems}=useCart();
-    const[order,setOrder]=useState(selectedItems)
+    const{selectedItems}=useCart();
     const random=Math.floor(Math.random()*500);
     const navigate=useNavigate();
         return (
@@ -35,7 +34,7 @@ function Checkout() {
             <hr/>
             <h3>Order payment details</h3>
             {
-                order.map((orderItem)=>{
+                selectedItems.map((orderItem)=>{
                     const{idCategory,strCategory}=orderItem
                    return <div key={idCategory}>
                     <a style={{fontSize:"20px"}}>{strCategory}
@@ -45,7 +44,7 @@ function Checkout() {
                 })
              }
              <hr/>
-            <h4>Order Total :{random*order.length} </h4>
+            <h4>Order Total :{random*selectedItems.length} </h4>
             <Button variant="primary" onClick={()=>navigate("/order")}>
             Order</Button>
             </>
