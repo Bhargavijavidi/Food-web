@@ -32,7 +32,8 @@ function BasicExample() {
 useEffect(()=>{
     fetchFooddata(URL)
 },[])
-const findItem = () => { const newItems = food.filter((eachItem) =>
+const findItem = () => {
+    const newItems = food.filter((eachItem) =>
     eachItem.strCategory.toLowerCase().includes(searchterm.toLowerCase()));
      setFilteredFood(newItems);
      };
@@ -76,7 +77,8 @@ const handlebuynow=(item)=>{
                  <Card.Title>{strCategory}</Card.Title>
                   <Card.Text className="card-text"> {strCategoryDescription}</Card.Text> 
                   <Card.Text>Rs.129</Card.Text>
-                 <Button variant="primary" onClick={()=>handlebuynow(item)}>Buy Now</Button> </Card.Body> </Card> ); }) ) }
+                 <Button variant="primary" onClick={()=>handlebuynow(item)}>
+                    Buy Now</Button> </Card.Body> </Card> ); }) ) }
      </div>
    
     </>
